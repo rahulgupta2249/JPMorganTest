@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="3">
+    <test verbose="2" preserve-order="true" name="/Users/rahulgupta/Documents/Java_WorkSpace/JpMorganAssignment">
+        <classes><class name="org.jpmorgan.runners.TestNGTestRunner"></class></classes>
+    </test>
+
+    <listeners>
+        <listener class-name="org.jpmorgan.listeners.TestListener"></listener>
+    </listeners>
+</suite>
+
