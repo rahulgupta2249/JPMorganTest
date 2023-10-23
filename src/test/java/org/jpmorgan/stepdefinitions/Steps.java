@@ -35,14 +35,14 @@ public class Steps {
     public void a_post_request_is_sent_to_uri(String uri) {
         // Write code here that turns the phrase above into concrete actions
         Payload<MakePostDTO> payload = new MakePostPayload();
-        MakePostDTO payloadFromPojo = payload.createPayloadFromPojo();
+        MakePostDTO payloadFromPojo = payload.createPayloadFromDTO();
         response = RestUtils.performPost(requestSpecification, payloadFromPojo, uri);
     }
 
     @When("Commenting on Post request is sent to {string} URI")
     public void commentingOnPostRequestIsSentToURI(String uri) {
         Payload<CommentOnPostDTO> payload = new CommentOnPostPayload();
-        CommentOnPostDTO payloadFromPojo1 = payload.createPayloadFromPojo();
+        CommentOnPostDTO payloadFromPojo1 = payload.createPayloadFromDTO();
          response = RestUtils.performPost(requestSpecification, payloadFromPojo1, uri);
     }
     @Then("the response status code should be {int}")
@@ -65,10 +65,7 @@ public class Steps {
     @When("a GET request is sent to {string} URI")
     public void a_get_request_is_sent_to_uri(String uri) {
 
-        // Write code here that turns the phrase above into concrete actions
         response = RestUtils.retrieveUsersList(requestSpecification, uri);
-
-
 
     }
     @Then("the response body should retrieve the list of users with the provided data")

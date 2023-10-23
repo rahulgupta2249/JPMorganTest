@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 public class APIUtils {
 
     private APIUtils(){
-
     }
 
     @SneakyThrows

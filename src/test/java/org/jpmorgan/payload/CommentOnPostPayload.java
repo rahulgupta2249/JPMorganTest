@@ -5,7 +5,7 @@ import org.jpmorgan.models.CommentOnPostDTO;
 
 public class CommentOnPostPayload implements Payload{
 
-    public CommentOnPostDTO createPayloadFromPojo() {
+    public CommentOnPostDTO createPayloadFromDTO() {
 
         return CommentOnPostDTO.builder()
                 .setName(RandomDataGenerator.generateFullName())

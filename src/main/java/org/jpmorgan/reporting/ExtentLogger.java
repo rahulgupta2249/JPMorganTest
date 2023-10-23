@@ -21,10 +21,6 @@ public final class ExtentLogger {
         ExtentReportManager.getExtentTest().fail(MarkupHelper.createLabel(message, ExtentColor.RED));
     }
 
-    public static void skip(String message) {
-        ExtentReportManager.getExtentTest().skip(MarkupHelper.createLabel(message, ExtentColor.ORANGE));
-    }
-
     public static void info(String message) {
         ExtentReportManager.getExtentTest().info(MarkupHelper.createLabel(message, ExtentColor.BLUE));
     }

@@ -6,7 +6,7 @@ import org.jpmorgan.models.MakePostDTO;
 public class MakePostPayload implements Payload {
 
 
-    public MakePostDTO createPayloadFromPojo() {
+    public MakePostDTO createPayloadFromDTO() {
 
             return  MakePostDTO.builder()
                     .setUserId(Integer.valueOf(RandomDataGenerator.createRandomNumber(6)))
